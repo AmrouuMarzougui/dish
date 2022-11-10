@@ -1,0 +1,190 @@
+
+.marketsVerticalPaginationContainer {
+  width: 48%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    span {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .resultCount {
+      color: #858891;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  .paginationContainer {
+
+    .card {
+      background-color: #f1f5f8;
+      border-radius: 15px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 15px;
+
+      .image {
+        width: 50%;
+        position: relative;
+
+        .cardImage {
+          object-fit: cover;
+          width: 100%;
+          //height: 100%;
+          border-radius: 11px;
+          height: 200px;
+        }
+
+        .heart {
+          position: absolute;
+          bottom: 10%;
+          right: 5%;
+        }
+      }
+
+      .details {
+        position: relative;
+        width: 50%;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: normal;
+        }
+
+        .horizontalSeparator {
+          margin: 20px 0;
+        }
+
+        .speciality {
+          color: #858891;
+          font-size: 14px;
+        }
+
+        .topRight {
+          position: absolute;
+          top: 25px;
+          right: 25px;
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+
+          .rate {
+            font-weight: bold;
+            font-size: 16px;
+          }
+
+          .comments {
+            font-weight: normal !important;
+            font-size: 13px !important;
+            background-image: url("../../../../assets/chat.svg");
+            background-repeat: no-repeat;
+            padding-left: 15px;
+            background-position-y: 30%;
+          }
+        }
+      }
+    }
+
+  }
+  .paginator {
+    margin: 40px 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    .pages {
+      display: flex;
+
+      .page {
+        color: #333a50;
+        border: solid 1px #333a50;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0 3.5px;
+
+        &.active {
+          background-color: #d6d8dc;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and(max-width: 1023px) {
+  .marketsVerticalPaginationContainer {
+    width: 100%;
+
+    .horizontalSeparator {
+      //margin: 20px 0 !important;
+    }
+
+    .paginator {
+      margin: 0;
+    }
+
+    .header {
+      span {
+        font-size: calc(18px + 1vw);
+      }
+    }
+    .paginationContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      .card {
+        flex-direction: column;
+        .image {
+          width: unset;
+        }
+        .details {
+          width: unset;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 480px) {
+  .marketsVerticalPaginationContainer {
+    .paginationContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.reduction-container {
+  background-color: #fb5557;
+  border-radius: 20px;
+  height: 35px;
+  padding: 7px 30px;
+  text-align: center;
+  margin-top: 10px;
+  width: fit-content;
+  span {
+    color: white;
+    font-weight: bold;
+  }
+}

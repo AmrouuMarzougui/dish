@@ -1,0 +1,227 @@
+.shopContainer {
+  padding: 0 5vw;
+  width: 100%;
+
+  .shopHeader {
+    margin: 46px 0;
+
+    span {
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+
+  .optionsContainer {
+    width: 100%;
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+      .cardContainer {
+        margin: unset;
+      }
+    }
+  }
+
+  .shoppingCartContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: unset;
+
+    .dishesContainer {
+      width: 59%;
+    }
+
+    .shoppingCart {
+      border-radius: 20px;
+      margin-top: 110px;
+      width: 39%;
+      height: fit-content;
+      padding: 38px 33.5px 30.8px 31px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+      background-color: #f1f5f8;
+
+      button {
+        font-weight: bold;
+        font-size: 22px;
+        width: 100%;
+        &.success {
+          background-color: #45b995;
+        }
+        &.simple {
+          background-color: #333a50 ;
+        }
+      }
+
+      .horizontalSeparator {
+        margin: 20px 0;
+      }
+
+      span {
+        font-weight: normal;
+        font-size: 18px;
+      }
+
+      .shoppingListContainer {
+        position: relative;
+        .loading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999999;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(51, 58, 80, 0.65);
+          backdrop-filter: blur(3px);
+          position: absolute;
+          border-radius: 10px;
+          top: 0;
+          left: 0;
+          right: 0;
+
+          .spinnerIcon {
+            animation: rotation 3s infinite linear;
+
+            @keyframes rotation {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(359deg);
+              }
+            }
+          }
+        }
+        .shoppingItem{
+          margin-top: 22px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .cont {
+            display: flex;
+            flex-direction: column;
+            span {
+              display: inline-block;
+              margin-bottom: 10px;
+            }
+
+            .title {
+              font-size: 18px;
+              font-weight: bold;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              .incrementDecrement {
+                display: flex;
+                align-items: center;
+
+                img {
+                  margin: 0 5px;
+                  width: 30px;
+                  height: 30px;
+                }
+              }
+            }
+            .desc {
+              font-size: 16px;
+              font-weight: normal;
+              color: #858891;
+            }
+            .delete {
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: bold;
+              background-image: url("../../assets/closeBlack.svg");
+              background-repeat: no-repeat;
+              background-position-x: 0;
+              background-position-y: center;
+              padding-left: 17px;
+            }
+          }
+
+        }
+      }
+
+      .shoppingResult {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 919px) {
+  .shopContainer {
+    .shoppingCartContainer {
+      flex-direction: column;
+      .dishesContainer {
+        width: 100%;
+      }
+      .shoppingCart {
+        margin-top: 50px;
+        align-self: center;
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 626px) {
+  .shopContainer {
+    .shoppingCartContainer {
+      .dishesContainer {
+        .optionsContainer {
+          .cards {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .shopContainer {
+    padding: 0 2vw;
+    .shopHeader {
+      margin: 20px 0;
+      span {
+        font-size: 24px;
+      }
+    }
+    .shoppingCartContainer {
+      .shoppingCart {
+        width: 100%;
+        padding: unset;
+        background-color: unset;
+        box-shadow: unset;
+        border-radius: unset;
+
+        .shoppingResult {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 919px) and(min-width: 769px) {
+  .shopContainer {
+    .shoppingCartContainer {
+      .shoppingCart {
+        align-self: center;
+        width: 70%;
+      }
+    }
+  }
+}

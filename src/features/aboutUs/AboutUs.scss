@@ -1,0 +1,56 @@
+.about-us-container {
+  background: white;
+
+  .container {
+    display: flex;
+    padding: 100px;
+    max-width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+
+    @media screen and (max-width: 1600px) and (min-width: 1000px) {
+      max-width: 100%;
+      margin-left: 0%;
+      padding: 20px;
+    }
+    @media screen and (max-width: 1000px) {
+      max-width: 90%;
+      margin-left: 5%;
+      padding: 20px;
+      display: block;
+    }
+
+    .item {
+      flex: 2;
+      padding: 10px;
+    }
+  }
+}
+
+.card-row {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 30px;
+  height: 100%;
+
+  h2 {
+    padding-bottom: 30px;
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+.underlined {
+  border-bottom: solid #fb5557 5px;
+}
+
+.item-image-row {
+  width: 100%;
+  height: 100%;
+}
+
+.image-row {
+  width: 100%;
+  height: 100%;
+}

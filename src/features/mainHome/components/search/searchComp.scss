@@ -1,0 +1,39 @@
+
+.bannerContainer {
+  width: 100%;
+  height: calc(0.390625 * 100vw);
+  background-image: url('../../../../assets/banner.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .searchLabel {
+    text-align: center;
+    font-size: calc(20px + 1.5vw);
+    font-weight: bold;
+  }
+
+  .searchInputHome {
+    margin-top: 30px;
+    width: 55%;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .bannerContainer {
+    background-size: cover;
+    height: 300px;
+
+    .searchLabel {
+      font-size: calc(0.5vw + 20px);
+    }
+
+    .searchInputHome {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+
+.authContainer {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../assets/backgroundAuth.svg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;
+
+  &.noBackground {
+    background-image: unset;
+  }
+
+  .logo {
+    margin-bottom: 50px;
+  }
+
+  .steppersContainer {
+    width: 536px;
+  }
+}
+
+input {
+  background-color: #f1f5f8;
+  height: 60px;
+  width: 100%;
+  padding: 20px;
+}
+
+@media screen and(max-width: 768px) {
+  .authContainer {
+    background-image: unset;
+    width: unset;
+    justify-content: unset;
+    .logo {
+      margin-top: 30px;
+    }
+    .boldLabelTitle {
+      font-size: 30px;
+    }
+    .steppersContainer {
+      width: 95vw;
+    }
+  }
+}

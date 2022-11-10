@@ -1,0 +1,209 @@
+.styleShowModalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   width: auto;
+  border-radius: 40px;
+  box-shadow: 24;
+  width: 450px;
+  background-color: #f1f5f8;
+
+  @media screen and(max-width: 768px) {
+    border-radius: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
+}
+
+.ratesContainer {
+  max-width: 800px;
+
+  .rateCont {
+    margin-bottom: 20px;
+    background-color: #f1f5f8;
+    border-radius: 20px;
+    width: 100%;
+    height: 265px;
+    overflow-y: auto;
+    display: flex;
+    img {
+      border-radius: 20px 0 0 20px;
+      width: 45%;
+      //height: 100%;
+      object-fit: cover;
+    }
+
+    .mainCont {
+      width: 55%;
+      height: 100%;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .cardHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .head {
+          display: flex;
+          flex-direction: column;
+          .title {
+            font-weight: bold;
+            font-size: 18px;
+          }
+          .speciality {
+            color: #858891;
+            font-size: 14px;
+          }
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+          object-fit: contain;
+          border-radius: unset;
+          margin-left: 10px;
+        }
+      }
+
+      .cardMid{
+        .mid{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+
+          .rateTitle {
+            span {
+              font-weight: bold;
+              font-size: 16px;
+              margin-right: 10px;
+            }
+            .date {
+              font-size: 14px;
+              font-weight: normal;
+              color: #858891;
+            }
+          }
+          .rateNumber{
+            font-weight: bold;
+          }
+        }
+        .cardDesc {
+          font-size: 16px;
+          //text-align: justify;
+          overflow-y: auto;
+          max-height: 120px;
+        }
+
+      }
+    }
+  }
+}
+
+
+.rateModal {
+  padding: 28px 40px;
+  position: relative;
+
+  button {
+    position: absolute;
+    background-color: #333a50;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    height: 50px;
+  }
+
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+  .slider {
+    .MuiSlider-sizeMedium {
+      color: #fb5557 !important;
+    }
+    .MuiSlider-thumbSizeMedium:hover{
+      box-shadow: 0px 0px 0px 8px rgb(255 54 0 / 16%) !important;
+    }
+    .note {
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+  .title {
+    margin-bottom: 40px;
+    span {
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+    }
+  }
+  .rate{
+    display: flex;
+    flex-direction: column;
+    span {
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+    }
+    textarea {
+      resize: none;
+      border: unset;
+      background-color: #f1f5f8;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+
+}
+
+@media screen and(max-width: 768px) and(min-width: 480px) {
+  .ratesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .ratesContainer {
+    .rateCont {
+      flex-direction: column;
+      height: unset;
+      img {
+        width: unset;
+      }
+      .mainCont {
+        width: unset;
+        padding: 10px;
+      }
+    }
+  }
+
+  .rateModal {
+    padding: 10px;
+
+    .modalHeader {
+      padding: 5px;
+    }
+    .slider {
+      padding: 0 10px;
+    }
+    button {
+      border-radius: unset;
+    }
+  }
+}
+

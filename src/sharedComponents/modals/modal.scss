@@ -1,0 +1,188 @@
+
+.shoppingModalContainer {
+  width: 100%;
+  //overflow-y: auto;
+  .horizontalSeparator {
+    margin: 15px 40px;
+  }
+
+  .shoppingModalHeader {
+    background-position-y: center;
+    position: relative;
+    height: 29vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px 40px 0 0;
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+  .cont {
+    max-height: 60vh;
+    overflow-y: auto;
+
+    .shoppingModalDescription {
+      padding: 17px 40px;
+      display: flex;
+      flex-direction: column;
+
+      .shoppingModalDescriptionTitle {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+
+      span {
+        font-size: 16px;
+        color: #858891;
+      }
+    }
+
+    .shoppingModalSpecialInstruction {
+      padding: 17px 40px;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        resize: none;
+        border: unset;
+        background-color: #f1f5f8;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .shoppingModalChoices {
+      padding: 17px 40px;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        color: black;
+
+      }
+
+      span {
+        font-size: 16px;
+        color: #858891;
+        margin-bottom: 10px;
+      }
+
+      .radioElements {
+
+      }
+    }
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+  }
+
+  .checklist-input {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+     input {
+      vertical-align: middle;
+     float: left;
+    }
+  }
+
+  .option-details {
+    float: right;
+    padding-left: 20px;
+    span {
+      padding: 0px 10px;
+    }
+  }
+
+
+  .shoppingModalFooter {
+    height: 10vh;
+    background-color: #f1f5f8;
+    padding: 23px 35px;
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .shoppingModalFooterSettings {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        padding: 0 10px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+
+    button {
+      width: 400px;
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px;
+      background-color: #45b995;
+    }
+  }
+}
+
+
+@media screen and(max-width: 768px) {
+
+  .shoppingModalContainer {
+    .shoppingModalHeader {
+      height: 27vh;
+      border-radius: 15px 15px 0 0;
+      // img {
+      //   display: none;
+      // }
+    }
+
+    .cont {
+      max-height: 50vh;
+      .horizontalSeparator {
+        margin: 15px;
+      }
+      .shoppingModalDescription {
+        padding: 15px 15px 0 15px;
+      }
+      .shoppingModalChoices {
+        padding: 0 15px 0 15px;
+      }
+      .shoppingModalSpecialInstruction {
+        padding: 0 15px 0 15px;
+      }
+    }
+
+    .shoppingModalFooter {
+      border-radius: unset;
+      padding: 23px 10px;
+      button {
+        width: 50%;
+      }
+    }
+  }
+}
